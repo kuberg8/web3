@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Match_o-matche_match_live</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/adcc431357.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header> <!-- Меню -->
+		<div class="container">
+			<div class="header_inner">
+
+				<button onclick="open_menu()" class="nav-toggle" type="button">
+					<span class="nav-toggle_item"></span>
+				</button>				
+
+
+				<a href="#" class="header_logo"> <!-- logo -->
+					<div class="logo_top">
+						<div class="logo">Big sport</div>
+						<div class="online">online</div>
+					</div>
+					<div class="logo_bottom">Все спортивные трансляции онлайн</div>					
+				</a>
+
+				<span class="algin_item">
+					<nav class="nav"> <!-- Ссылки -->
+						<div class="block_button_mobile space_between">
+							<span class="completed logo algin_item">Меню</span>
+							<button onclick="close_menu()" class="nav-toggle-close" type="button">
+								<i class="fas fa-times"></i>
+							</button>								
+						</div>
+
+						<ul>
+							<li class="nav_link"><a href="#">Главная</a></li>
+							<li class="nav_link"><a href="#">Матчи</a>
+								<span class="arrow"></span>
+
+								<span class="menu">
+									<div class="menu_item active_menu_item"><i class="fas fa-futbol img_menu"></i>Футбол</div>
+									<div class="menu_item"><i class="fas fa-hockey-puck img_menu"></i>Хоккей</div>
+									<div class="menu_item"><i class="fas fa-basketball-ball img_menu"></i>Баскетбол</div>
+									<div class="menu_item"><i class="fas fa-volleyball-ball img_menu"></i>Волейбол</div>
+								</span>
+							</li>
+
+							<li class="nav_link"><a href="#">Трансляция</a>
+								<span class="arrow"></span>
+
+								<span class="menu">
+									<div class="menu_item active_menu_item"><i class="fas fa-futbol img_menu"></i>Футбол</div>
+									<div class="menu_item"><i class="fas fa-hockey-puck img_menu"></i>Хоккей</div>
+									<div class="menu_item"><i class="fas fa-basketball-ball img_menu"></i>Баскетбол</div>
+									<div class="menu_item"><i class="fas fa-volleyball-ball img_menu"></i>Волейбол</div>
+								</span>
+							</li>
+
+							<li class="nav_link"><a href="#">Видео</a></li>
+						</ul>
+					</nav>
+
+					<span class="time">
+						<img src="images/Clock.svg">
+						Московское время
+						<span>22:17</span> <!-- Время -->
+					</span>	
+
+					<span class="time_small">
+						<img src="images/Clock.svg">
+						МСК
+						<span>22:17</span> <!-- Время -->
+					</span>						
+				</span>			
+
+				<div class="under_header font_medium">
+					<a href="">Главная</a>
+					<span> / </span>
+					<a href="" style="color: #022236;">Матч: о матче</a>
+				</div>					
+			</div>
+		</div>
+	</header>
+
+
+	<div class="container"> <!-- Контент -->
+		<div class="content">
+
+			<div class="left_block"> <!-- Левый блок -->
+				<div class="block without_margin"> <!-- Матч: о матче -->
+					<h1 class="caption">Матч: о матче</h1>
+					
+					<div class="block_item very_big">
+						<span class="very_big_item font_medium_white">
+							20:30 // 10 марта // Воскресенье
+						</span>
+						<span class="very_big_item">
+							<span class="algin_item reverse_block match_mobile">
+								<div class="width_team_name_big"><a href="">Ахмат</a></div>
+								<div class="img_team_big"><img src="images/Icon.svg"></div>	
+							</span>
+
+							<div class="score score_big">3 : 4</div>
+
+							<span class="algin_item mobile_block match_mobile">
+								<div class="img_team_big"><img src="images/Icon.svg"></div>
+								<div class="width_team_name_big"><a href="">Ростов</a></div>			
+							</span>
+
+						</span>
+						<span class="very_big_item">
+							<div class="live">
+								<span class="live_status"></span>
+								<span>Live</span>
+							</div>
+						</span>							
+					</div>					
+	
+				</div>		
+				
+				<div class="block with_few_margin"> <!-- меню -->
+					<span class="small_menu small_menu_with_space small_menu_with_border">
+						<div class="small_menu_item active_small_menu_item">О матче</div>
+						<div class="small_menu_item">Турнирная таблица</div>
+						<div class="small_menu_item">Статистика</div>
+						<div class="small_menu_item">Стартовые составы</div>
+						<div class="small_menu_item">Прогнозы</div>
+						<div class="small_menu_item">Видео-обзор</div>
+						<div class="small_menu_item">Трансляция</div>
+					</span>				
+				</div>
+
+				<div class="block"> <!-- Время матча -->
+					<div class="block_item small">
+						<span class="completed margin_time_left">17:20</span>
+						<div class="rating">
+							<div class="rating_completed" style="width: 100%;">
+							</div>
+						</div>	
+						<span class="completed margin_time_mid">Перерыв</span>	
+						<div class="rating">
+							<div class="rating_completed" style="width: 93%;">
+								<div class="time_rating_info completed">87'</div>
+								<div class="arrowThree"></div>								
+							</div>							
+						</div>	
+						<span class="font_medium margin_time_right">90'</span>						
+					</div>					
+				</div>					
+
+				<div class="block"> <!-- Информация о матче -->
+					<h1 class="caption">Информация о матче</h1>
+					<div class="column">
+						<div class="column_block">
+							<div class="block_item small space_between">
+								<span class="font_medium">Турнир</span>
+								<span>Россия. Премьер-лига</span>
+							</div>
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Место</span>
+								<span>Стадион "<a href="">Урал</a>маш"</span>
+							</div>														
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Вместимость стадиона</span>
+								<span>13 500</span>
+							</div>
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Рефери</span>
+								<span>Алексей Николаев</span>
+							</div>								
+						</div>	
+
+						<div class="column_block">
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Страна рефери</span>
+								<span>Россия</span>
+							</div>
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Лучиший игрок <div>команды А</div></span>
+								<span class="algin_item" style="display: flex;">
+									<span>
+										<span class="name_player">Александр Шепляков</span>  
+										<div class="font_medium text_algin_right">8.9</div>					
+									</span>
+
+									<div class="img_team"><img src="??.jpg"></div>
+								</span>
+							</div>														
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Лучиший игрок <div>команды B</div></span>
+								<span class="algin_item" style="display: flex;">
+									<span>
+										<span class="name_player">Владислав Полетаев</span>  
+										<div class="font_medium text_algin_right">8.9</div>					
+									</span>
+
+									<div class="img_team"><img src="??.jpg"></div>
+								</span>
+							</div>
+
+							<div class="block_item small space_between algin_item">
+								<span class="font_medium">Карточек в среднем</span>
+								<span class="team">
+									<img src="images/red_card.svg" style="margin: 0 10px 0 20px;">1.0
+									<img src="images/yellow_card.svg" style="margin: 0 10px 0 20px;">3.66
+								</span>
+							</div>								
+						</div>						
+		
+					</div>											
+				</div>
+
+				<div class="block"> <!-- Основные события матча -->
+					<h1 class="caption">Основные события матча</h1>
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">
+							<span class="left_players float_right algin_item">
+								<span>
+									<span>Травма</span>
+									<div class="font_medium">А. Шепляков</div>
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span class="icon">
+									<img src="images/injury.svg">
+								</span>
+							</span>							
+
+							<span class="font_medium">81'</span>
+						</span>
+					</div>		
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">						
+
+							<span class="font_medium">79'</span>
+
+							<span class="right_players float_left algin_item">
+								<span class="icon">
+									<img src="images/red_goal.svg">
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Не забитый пенальти</span>
+									<div class="font_medium">А. Юшаков</div>
+								</span>
+							</span>
+						</span>
+					</div>	
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">
+							<span class="left_players float_right algin_item">
+								<span>
+									<span>Автогол</span>
+									<div class="font_medium">О. Роши</div>
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span class="icon">
+									<img src="images/red_ball.svg">
+								</span>
+							</span>							
+
+							<span class="font_medium">72'</span>
+						</span>
+					</div>		
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">						
+
+							<span class="font_medium">63'</span>
+
+							<span class="right_players float_left algin_item">
+								<span class="icon">
+									<img src="images/arrow.svg">
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Вышел</span>
+									<div class="font_medium">С. Гаврилов</div>
+								</span>							
+							</span>		
+
+							<span class="second_right_players float_left algin_item">
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Ушел</span>
+									<div class="font_medium">Н. Сергеев</div>
+								</span>
+							</span>													
+						</span>
+					</div>	
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">						
+
+							<span class="font_medium">56'</span>
+
+							<span class="right_players float_left algin_item">
+								<span class="icon">
+									<img src="images/green_goal.svg">
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Пенальти</span>
+									<div class="font_medium">В. Вильдяев</div>
+								</span>
+							</span>
+						</span>
+					</div>
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">
+							<span class="left_players float_right algin_item">
+								<span>
+									<span>Красная карточка</span>
+									<div class="font_medium">А. Швец</div>
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span class="icon">
+									<img src="images/red_card.svg">
+								</span>
+							</span>							
+
+							<span class="font_medium">49'</span>
+						</span>
+					</div>												
+
+					<div class="block_item small just_content">
+						<span class="text_algin">
+							<span>Первый тайм завершен</span>
+							<div class="completed">Счет 0:1</div>
+						</span>
+					</div>		
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">						
+
+							<span class="font_medium">39'</span>
+
+							<span class="right_players float_left algin_item">
+								<span class="icon">
+									<img src="images/green_ball.svg">
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Гол</span>
+									<div class="font_medium">Г. Епишин</div>
+								</span>
+							</span>
+							<span class="second_right_players float_left algin_item">
+								<span class="img_man"><img src="??.jpg"></span>
+								<span>
+									<span>Гол. пас</span>
+									<div class="font_medium">Г. Онучин</div>
+								</span>
+							</span>							
+						</span>
+					</div>		
+
+					<div class="block_item small just_content position_rel">
+						<span class="text_algin">
+							<span class="left_players float_right algin_item">
+								<span>
+									<span>Желтая карточка</span>
+									<div class="font_medium">Б. Бериша</div>
+								</span>
+								<span class="img_man"><img src="??.jpg"></span>
+								<span class="icon">
+									<img src="images/yellow_card.svg">
+								</span>
+							</span>							
+
+							<span class="font_medium">49'</span>
+						</span>
+					</div>																
+				</div>
+
+				<div class="block"> <!-- Матч будет показан на каналах -->
+					<h1 class="caption">Матч будет показан на каналах</h1>
+					<div class="column">
+						<div class="column_block">
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg"> Россия</span>
+									<span class="mid algin_item">Russia Extreme</span>
+								</div>
+							</div>
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+									<span class="mid algin_item">Матч!</span>
+								</div>
+							</div>														
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Франция</span>
+									<span class="mid algin_item">Eurosport 2</span>
+								</div>
+							</div>
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Беларусь</span>
+									<span class="mid algin_item">Беларусь 5</span>
+								</div>
+							</div>								
+						</div>	
+
+						<div class="column_block">
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+									<span class="mid algin_item">Россия 24</span>
+								</div>
+							</div>
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Португалия</span>
+									<span class="mid algin_item">Sport tv 2</span>
+								</div>
+							</div>													
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+									<span class="mid algin_item">Sport 1</span>
+								</div>
+							</div>
+
+							<div class="block_item small">
+								<div class="space_between">
+									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+									<span class="mid algin_item">Матч! Футбол</span>
+								</div>
+							</div>							
+						</div>						
+		
+					</div>											
+				</div>		
+
+				<div class="block"> <!-- Мнение болельщиков -->
+					<h1 class="caption">Мнение болельщиков</h1>
+					<div class="block_item middle_simple">
+						<div class="rating">
+							<div class="rating_completed"></div>
+						</div>
+						<div class="rating_info">80.07% (45 370) голосов за команду А</div>				
+					</div>		
+
+					<div class="block_item middle_simple">
+						<div class="rating">
+							<div class="rating_mid"  style="width: 20%;"></div>
+						</div>
+						<div class="rating_info">13.08% (7 414) голосов за команду B</div>				
+					</div>	
+
+					<div class="block_item middle_simple">
+						<div class="rating">
+							<div class="rating_not_started"  style="width: 5%;"></div>
+						</div>
+						<div class="rating_info">6.85% (3 879) голосов за ничью</div>				
+					</div>														
+				</div>		
+
+				<div class="block"> 
+					<div class="column">
+						<div class="column_block"> <!-- Последние игры команды А -->
+							<h1 class="caption">Последние игры команды А</h1>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>																					
+						</div>
+
+						<div class="column_block"> <!-- Последние игры команды B -->
+							<h1 class="caption">Последние игры команды B</h1>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>
+
+							<div class="block_item big with_padding_bottom">
+								<span class="font_medium big_item">11.03.19</span>
+								<span class="big_item mobile_space_between">
+									<span class="algin_item reverse">
+										<div class="width_team_name"><a href="">Ахмат</a></div>
+										<div class="img_team"><img src="??.jpg"></div>					
+									</span>
+
+									<div class="score"><a href="">1:2</a></div>
+
+									<span class="algin_item reverse">
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name"><a href="">Ростов</a></div>		
+									</span>
+
+								</span>						
+							</div>																					
+						</div>			
+		
+					</div>											
+				</div>													
+			</div>
+
+			<div class="right_block"> <!-- Правый блок -->
+
+				<div class="mobile_switch"> <!-- меню на мобилке -->
+					<div onclick="switch_focus(this)" class="mobile_switch_item mobile_switch_item_active">Турнирная таблица</div>
+					<div onclick="switch_focus(this)" class="mobile_switch_item">Тоp игроков</div>
+				</div>
+
+				<div id="standings_table" class="block"> <!-- Турнирная таблица -->
+					<h1 class="caption">Турнирная таблица</h1> 
+
+					<div onclick="openLeague_block(this)" class="block_item small Premier_League">
+						<div class="league_icon_small"><img src="??.jpg"></div>
+						<span style="padding-left: 5px;">Россия. Примьер-лига</span>
+						<span>
+							<span class="arrowTwo up"></span>
+							<span class="arrowTwo down"></span>
+						</span>
+						
+						<div class="block_item League_block">
+							<div class="scroll">
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига наций</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига чемпионов</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига Европы</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Россия. Премьер-лига</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Англия. Премьер-лига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Испания. Ла лига</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Италия. Серия А</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Германия. Бундеслига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Франция. Лига 1</span>
+								</div>																
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига наций</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига чемпионов</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига Европы</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Россия. Премьер-лига</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Англия. Премьер-лига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Испания. Ла лига</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Италия. Серия А</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Германия. Бундеслига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Франция. Лига 1</span>
+								</div>														
+							</div>					
+						</div>
+					</div>
+					
+					<span>
+						<div class="mid Group">
+							Группа-А
+						</div>					
+
+						<div class="font_medium" style="padding: 10px 20px; display: flex; justify-content: space-between;">
+							Команда
+							<span class="count">
+								<span>М</span>
+								<span>О</span>
+							</span>
+						</div>
+
+						<div class="block_item small team" style="border-left:2px solid #3eb745;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #3eb745;">01</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Зенит</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>40</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #3eb745;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #3eb745;">02</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Краснодар</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>35</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #0081d8;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #0081d8;">03</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">ЦСКА</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>33</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #0081d8;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #0081d8;">04</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Ростов</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>32</span>
+							</span>						
+						</div>	
+					</span>
+
+					<span>
+						<div class="mid Group">
+							Группа-B
+						</div>					
+
+						<div class="font_medium" style="padding: 10px 20px; display: flex; justify-content: space-between;">
+							Команда
+							<span class="count">
+								<span>М</span>
+								<span>О</span>
+							</span>
+						</div>
+
+						<div class="block_item small team" style="border-left:2px solid #3eb745;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #3eb745;">01</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Зенит</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>40</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #3eb745;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #3eb745;">02</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Краснодар</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>35</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #0081d8;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #0081d8;">03</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">ЦСКА</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>33</span>
+							</span>						
+						</div>	
+
+						<div class="block_item small team" style="border-left:2px solid #0081d8;">
+							<span class="algin_item">
+								<span class="font_bold number_margin" style="color: #0081d8;">04</span>
+								<div class="img_team"><img src="??.jpg"></div>
+								<span><a href="">Ростов</a></span>
+							</span>
+							<span class="count font_medium">
+								<span>19</span>
+								<span>32</span>
+							</span>						
+						</div>		
+					</span>										
+				</div>
+
+				<div id="top_players" class="block"> <!-- Top игроков -->
+					<h1 class="caption">Top игроков</h1>
+
+					<div onclick="openLeague_block(this)" class="block_item small Premier_League">
+						<div class="league_icon_small"><img src="??.jpg"></div>
+						<span style="padding-left: 5px;">Россия. Примьер-лига</span>
+						<span>
+							<span class="arrowTwo up"></span>
+							<span class="arrowTwo down"></span>
+						</span>	
+
+						<div class="block_item League_block">
+							<div class="scroll">
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига наций</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига чемпионов</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига Европы</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Россия. Премьер-лига</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Англия. Премьер-лига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Испания. Ла лига</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Италия. Серия А</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Германия. Бундеслига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Франция. Лига 1</span>
+								</div>																
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига наций</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига чемпионов</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Лига Европы</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Россия. Премьер-лига</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Англия. Премьер-лига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Испания. Ла лига</span>
+								</div>
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Италия. Серия А</span>
+								</div>															
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Германия. Бундеслига</span>
+								</div>	
+
+								<div class="League_block_item">
+									<img src="???.jpg">
+									<span>Франция. Лига 1</span>
+								</div>														
+							</div>					
+						</div>										
+					</div>	
+
+					<span class="small_menu small_menu_with_space small_menu_with_border">
+						<div class="small_menu_item">Команда недели</div>
+						<div class="small_menu_item active_small_menu_item">Бомбардиры</div>
+						<div class="small_menu_item">Ассистенты</div>
+					</span>	
+
+					<div class="font_medium" style="padding: 10px 15px;">Игроки</div>		
+					
+					<div class="block_item small team">
+						<span class="algin_item">
+							<span class="not_started font_bold number_margin">01</span>
+							<div class="img_man"><img src="??.jpg"></div>
+							<span class="display_block">
+								<span>Фабио Куальярелла</span> 
+								<div class="font_medium algin_item" style=" padding-top: 5px;">
+									<img class="img_margin" src="??.jpg">
+									<span>Сампдория</span> 
+								</div>
+							</span>
+						</span>
+						<span class="font_medium font_bold">40</span>						
+					</div>	
+
+					<div class="block_item small team">
+						<span class="algin_item">
+							<span class="not_started font_bold number_margin">02</span>
+							<div class="img_man"><img src="??.jpg"></div>
+							<span class="display_block">
+								<span>Кшиштоф Пионтек</span> 
+								<div class="font_medium algin_item" style=" padding-top: 5px;">
+									<img class="img_margin" src="??.jpg">
+									<span>Милан</span> 
+								</div>
+							</span>
+						</span>
+						<span class="font_medium font_bold">35</span>						
+					</div>		
+
+					<div class="block_item small team">
+						<span class="algin_item">
+							<span class="not_started font_bold number_margin">03</span>
+							<div class="img_man"><img src="??.jpg"></div>
+							<span class="display_block">
+								<span>Криштиану Роналду</span> 
+								<div class="font_medium algin_item" style="padding-top: 5px; ">
+									<img class="img_margin" src="??.jpg">
+									<span>Ювентус</span> 
+								</div>
+							</span>
+						</span>
+						<span class="font_medium font_bold">33</span>						
+					</div>	
+
+					<div class="block_item small team">
+						<span class="algin_item">
+							<span class="not_started font_bold number_margin">04</span>
+							<div class="img_man"><img src="??.jpg"></div>
+							<span class="display_block">
+								<span>Дуван Сапата</span> 
+								<div class="font_medium algin_item" style=" padding-top: 5px; ">
+									<img class="img_margin" src="??.jpg">
+									<span>Атланта</span> 
+								</div>
+							</span>
+						</span>
+						<span class="font_medium font_bold">32</span>						
+					</div>		
+
+					<div class="block_item small team">
+						<span class="algin_item">
+							<span class="not_started font_bold number_margin">05</span>
+							<div class="img_man"><img src="??.jpg"></div>
+							<span class="display_block">
+								<span>Аркадуиш Миляк</span> 
+								<div class="font_medium algin_item" style=" padding-top: 5px;">
+									<img class="img_margin" src="??.jpg">
+									<span>Наполи</span> 
+								</div>
+							</span>
+						</span>
+						<span class="font_medium font_bold">32</span>						
+					</div>											
+				</div>	
+
+
+				<div class="block"> <!-- Последние видео -->
+					<h1 class="caption">Последние видео</h1>
+					
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>	
+
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>		
+
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>		
+
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>		
+
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>	
+
+					<div class="block_item big">
+						<span class="big_item mobile_space_between">
+							<span class="algin_item reverse">
+								<div class="width_team_name"><a href="">Оренбург</a></div>
+								<div class="img_team"><img src="??.jpg"></div>							
+							</span>
+
+							<div class="score"><a href="">2:1</a></div>
+
+							<span class="algin_item reverse">
+								<div class="img_team"><img src="??.jpg"></div>
+								<div class="width_team_name"><a href="">Урал</a></div>					
+							</span>
+						</span>
+						<span class="big_item">
+							<div class="league_icon_small"><img src="??.jpg"></div>
+							<div>
+								<a class="font_medium" href=""><span>Футбол. Россия Премьер-лига</span>
+								<span>2018/2019</span></a>
+							</div>
+						</span>							
+					</div>						
+
+
+					<a href=""><button class="green_button">Все видео обзоры</button></a>			
+				</div>							
+			</div>	
+		</div>	
+	</div>
+	
+
+	<footer> <!-- нижний колонтитул -->
+		<div class="container">
+			<div class="footer_inner">
+				<a href="#" class="header_logo"> <!-- logo -->
+					<div class="logo_top">
+						<div class="logo">Big sport</div>
+						<div class="online">online</div>
+					</div>
+					<div class="logo_bottom">Все спортивные трансляции онлайн</div>					
+				</a>
+				<div class="contacts">
+					<span class="contacts_item"><a href="">Правообладателям</a></span>
+					<span class="contacts_item"><a href="">Контакты</a></span>
+				</div>
+				<div class="time">
+					<img src="images/Clock.svg">
+					Московское время
+					<span>2<a href="">2:1</a>7</span>
+				</div>							
+			</div> 
+		</div>
+  	</footer>
+
+  	<script src="javaScript.js"></script>
+</body>
+</html>

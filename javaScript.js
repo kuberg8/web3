@@ -28,7 +28,7 @@ function switch_focus(elim) {
 	if (elim.textContent === "Тоp игроков") {
 		document.getElementById('standings_table').style.display = 'none'
 		document.getElementById('top_players').style.display = 'block'
-	} else {
+	} else if(elim.textContent === "Турнирная таблица") {
 		document.getElementById('top_players').style.display = 'none'
 		document.getElementById('standings_table').style.display = 'block'		
 	}
@@ -42,4 +42,32 @@ function open_menu() {
 
 function close_menu() {
 	document.getElementsByClassName('nav')[0].style.display = 'none'
+}
+
+
+
+function contetnSwitch(elim, content, notNone) {
+
+	if(notNone != true) {
+		let small_menu_item = document.getElementsByClassName('small_menu_item')
+		for (var i = 0; i < small_menu_item.length; i++) {
+			small_menu_item[i].classList.remove('active_small_menu_item')
+		}
+
+		elim.classList.add('active_small_menu_item')
+
+		let content_switch = document.getElementsByClassName('content_switch')
+
+		for (var i = 0; i < content_switch.length; i++) {
+			content_switch[i].style.display = "none"
+		}
+	}
+
+
+	document.getElementById(content).style.display = 'block'
+}
+
+
+function close_standings() {
+	document.getElementById('standings').style.display = 'none'
 }

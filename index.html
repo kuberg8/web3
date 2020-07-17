@@ -30,7 +30,7 @@
 						<div class="block_button_mobile space_between">
 							<span class="completed logo algin_item">Меню</span>
 							<button onclick="close_menu()" class="nav-toggle-close" type="button">
-								<i class="fas fa-times"></i>
+								<i class="far fa-times-circle"></i>
 							</button>								
 						</div>
 
@@ -122,513 +122,2003 @@
 				
 				<div class="block with_few_margin"> <!-- меню -->
 					<span class="small_menu small_menu_with_space small_menu_with_border">
-						<div class="small_menu_item active_small_menu_item">О матче</div>
-						<div class="small_menu_item">Турнирная таблица</div>
-						<div class="small_menu_item">Статистика</div>
-						<div class="small_menu_item">Стартовые составы</div>
-						<div class="small_menu_item">Прогнозы</div>
+						<div onclick="contetnSwitch(this, 'content_time_match')" class="small_menu_item active_small_menu_item">О матче</div>
+						<div onclick="contetnSwitch(this, 'standings', true)" class="small_menu_item">Турнирная таблица</div>
+						<div onclick="contetnSwitch(this, 'content_match_statistics')" class="small_menu_item">Статистика</div>
+						<div onclick="contetnSwitch(this, 'content_starting_lineups')" class="small_menu_item">Стартовые составы</div>
+						<div onclick="contetnSwitch(this, 'content_forecasts')" class="small_menu_item">Прогнозы</div>
 						<div class="small_menu_item">Видео-обзор</div>
 						<div class="small_menu_item">Трансляция</div>
 					</span>				
 				</div>
-
-				<div class="block"> <!-- Время матча -->
-					<div class="block_item small">
-						<span class="completed margin_time_left">17:20</span>
-						<div class="rating">
-							<div class="rating_completed" style="width: 100%;">
-							</div>
-						</div>	
-						<span class="completed margin_time_mid">Перерыв</span>	
-						<div class="rating">
-							<div class="rating_completed" style="width: 93%;">
-								<div class="time_rating_info completed">87'</div>
-								<div class="arrowThree"></div>								
-							</div>							
-						</div>	
-						<span class="font_medium margin_time_right">90'</span>						
+				
+				<span id="content_time_match" class="content_switch">
+					<div class="block"> <!-- Время матча -->
+						<div class="block_item small">
+							<span class="completed margin_time_left">17:20</span>
+							<div class="rating">
+								<div class="rating_completed" style="width: 100%;">
+								</div>
+							</div>	
+							<span class="completed margin_time_mid">Перерыв</span>	
+							<div class="rating">
+								<div class="rating_completed" style="width: 93%;">
+									<div class="time_rating_info completed">87'</div>
+									<div class="arrowThree"></div>								
+								</div>							
+							</div>	
+							<span class="font_medium margin_time_right">90'</span>						
+						</div>					
 					</div>					
-				</div>					
 
-				<div class="block"> <!-- Информация о матче -->
-					<h1 class="caption">Информация о матче</h1>
-					<div class="column">
-						<div class="column_block">
-							<div class="block_item small space_between">
-								<span class="font_medium">Турнир</span>
-								<span>Россия. Премьер-лига</span>
-							</div>
+					<div class="block"> <!-- Информация о матче -->
+						<h1 class="caption">Информация о матче</h1>
+						<div class="column">
+							<div class="column_block">
+								<div class="block_item small space_between">
+									<span class="font_medium">Турнир</span>
+									<span>Россия. Премьер-лига</span>
+								</div>
 
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Место</span>
-								<span>Стадион "<a href="">Урал</a>маш"</span>
-							</div>														
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Место</span>
+									<span>Стадион "<a href="">Урал</a>маш"</span>
+								</div>														
 
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Вместимость стадиона</span>
-								<span>13 500</span>
-							</div>
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Вместимость стадиона</span>
+									<span>13 500</span>
+								</div>
 
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Рефери</span>
-								<span>Алексей Николаев</span>
-							</div>								
-						</div>	
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Рефери</span>
+									<span>Алексей Николаев</span>
+								</div>								
+							</div>	
 
-						<div class="column_block">
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Страна рефери</span>
-								<span>Россия</span>
-							</div>
+							<div class="column_block">
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Страна рефери</span>
+									<span>Россия</span>
+								</div>
 
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Лучиший игрок <div>команды А</div></span>
-								<span class="algin_item" style="display: flex;">
-									<span>
-										<span class="name_player">Александр Шепляков</span>  
-										<div class="font_medium text_algin_right">8.9</div>					
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Лучиший игрок <div>команды А</div></span>
+									<span class="algin_item" style="display: flex;">
+										<span>
+											<span class="name_player">Александр Шепляков</span>  
+											<div class="font_medium text_algin_right">8.9</div>					
+										</span>
+
+										<div class="img_team"><img src="??.jpg"></div>
 									</span>
+								</div>														
 
-									<div class="img_team"><img src="??.jpg"></div>
-								</span>
-							</div>														
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Лучиший игрок <div>команды B</div></span>
+									<span class="algin_item" style="display: flex;">
+										<span>
+											<span class="name_player">Владислав Полетаев</span>  
+											<div class="font_medium text_algin_right">8.9</div>					
+										</span>
 
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Лучиший игрок <div>команды B</div></span>
-								<span class="algin_item" style="display: flex;">
-									<span>
-										<span class="name_player">Владислав Полетаев</span>  
-										<div class="font_medium text_algin_right">8.9</div>					
+										<div class="img_team"><img src="??.jpg"></div>
 									</span>
+								</div>
 
-									<div class="img_team"><img src="??.jpg"></div>
-								</span>
-							</div>
-
-							<div class="block_item small space_between algin_item">
-								<span class="font_medium">Карточек в среднем</span>
-								<span class="team">
-									<img src="images/red_card.svg" style="margin: 0 10px 0 20px;">1.0
-									<img src="images/yellow_card.svg" style="margin: 0 10px 0 20px;">3.66
-								</span>
-							</div>								
-						</div>						
-		
-					</div>											
-				</div>
-
-				<div class="block"> <!-- Основные события матча -->
-					<h1 class="caption">Основные события матча</h1>
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">
-							<span class="left_players float_right algin_item">
-								<span>
-									<span>Травма</span>
-									<div class="font_medium">А. Шепляков</div>
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span class="icon">
-									<img src="images/injury.svg">
-								</span>
-							</span>							
-
-							<span class="font_medium">81'</span>
-						</span>
-					</div>		
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">						
-
-							<span class="font_medium">79'</span>
-
-							<span class="right_players float_left algin_item">
-								<span class="icon">
-									<img src="images/red_goal.svg">
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Не забитый пенальти</span>
-									<div class="font_medium">А. Юшаков</div>
-								</span>
-							</span>
-						</span>
-					</div>	
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">
-							<span class="left_players float_right algin_item">
-								<span>
-									<span>Автогол</span>
-									<div class="font_medium">О. Роши</div>
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span class="icon">
-									<img src="images/red_ball.svg">
-								</span>
-							</span>							
-
-							<span class="font_medium">72'</span>
-						</span>
-					</div>		
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">						
-
-							<span class="font_medium">63'</span>
-
-							<span class="right_players float_left algin_item">
-								<span class="icon">
-									<img src="images/arrow.svg">
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Вышел</span>
-									<div class="font_medium">С. Гаврилов</div>
-								</span>							
-							</span>		
-
-							<span class="second_right_players float_left algin_item">
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Ушел</span>
-									<div class="font_medium">Н. Сергеев</div>
-								</span>
-							</span>													
-						</span>
-					</div>	
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">						
-
-							<span class="font_medium">56'</span>
-
-							<span class="right_players float_left algin_item">
-								<span class="icon">
-									<img src="images/green_goal.svg">
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Пенальти</span>
-									<div class="font_medium">В. Вильдяев</div>
-								</span>
-							</span>
-						</span>
+								<div class="block_item small space_between algin_item">
+									<span class="font_medium">Карточек в среднем</span>
+									<span class="team">
+										<img src="images/red_card.svg" style="margin: 0 10px 0 20px;">1.0
+										<img src="images/yellow_card.svg" style="margin: 0 10px 0 20px;">3.66
+									</span>
+								</div>								
+							</div>						
+			
+						</div>											
 					</div>
 
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">
-							<span class="left_players float_right algin_item">
-								<span>
-									<span>Красная карточка</span>
-									<div class="font_medium">А. Швец</div>
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span class="icon">
-									<img src="images/red_card.svg">
-								</span>
-							</span>							
+					<div class="block"> <!-- Основные события матча -->
+						<h1 class="caption">Основные события матча</h1>
 
-							<span class="font_medium">49'</span>
-						</span>
-					</div>												
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">
+								<span class="left_players float_right algin_item">
+									<span>
+										<span>Травма</span>
+										<div class="font_medium">А. Шепляков</div>
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span class="icon">
+										<img src="images/injury.svg">
+									</span>
+								</span>							
 
-					<div class="block_item small just_content">
-						<span class="text_algin">
-							<span>Первый тайм завершен</span>
-							<div class="completed">Счет 0:1</div>
-						</span>
-					</div>		
+								<span class="font_medium">81'</span>
+							</span>
+						</div>		
 
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">						
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">						
 
-							<span class="font_medium">39'</span>
+								<span class="font_medium">79'</span>
 
-							<span class="right_players float_left algin_item">
-								<span class="icon">
-									<img src="images/green_ball.svg">
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Гол</span>
-									<div class="font_medium">Г. Епишин</div>
+								<span class="right_players float_left algin_item">
+									<span class="icon">
+										<img src="images/red_goal.svg">
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Не забитый пенальти</span>
+										<div class="font_medium">А. Юшаков</div>
+									</span>
 								</span>
 							</span>
-							<span class="second_right_players float_left algin_item">
-								<span class="img_man"><img src="??.jpg"></span>
-								<span>
-									<span>Гол. пас</span>
-									<div class="font_medium">Г. Онучин</div>
-								</span>
-							</span>							
-						</span>
-					</div>		
-
-					<div class="block_item small just_content position_rel">
-						<span class="text_algin">
-							<span class="left_players float_right algin_item">
-								<span>
-									<span>Желтая карточка</span>
-									<div class="font_medium">Б. Бериша</div>
-								</span>
-								<span class="img_man"><img src="??.jpg"></span>
-								<span class="icon">
-									<img src="images/yellow_card.svg">
-								</span>
-							</span>							
-
-							<span class="font_medium">49'</span>
-						</span>
-					</div>																
-				</div>
-
-				<div class="block"> <!-- Матч будет показан на каналах -->
-					<h1 class="caption">Матч будет показан на каналах</h1>
-					<div class="column">
-						<div class="column_block">
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg"> Россия</span>
-									<span class="mid algin_item">Russia Extreme</span>
-								</div>
-							</div>
-
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
-									<span class="mid algin_item">Матч!</span>
-								</div>
-							</div>														
-
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Франция</span>
-									<span class="mid algin_item">Eurosport 2</span>
-								</div>
-							</div>
-
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Беларусь</span>
-									<span class="mid algin_item">Беларусь 5</span>
-								</div>
-							</div>								
 						</div>	
 
-						<div class="column_block">
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
-									<span class="mid algin_item">Россия 24</span>
-								</div>
-							</div>
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">
+								<span class="left_players float_right algin_item">
+									<span>
+										<span>Автогол</span>
+										<div class="font_medium">О. Роши</div>
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span class="icon">
+										<img src="images/red_ball.svg">
+									</span>
+								</span>							
 
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Португалия</span>
-									<span class="mid algin_item">Sport tv 2</span>
-								</div>
-							</div>													
+								<span class="font_medium">72'</span>
+							</span>
+						</div>		
 
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
-									<span class="mid algin_item">Sport 1</span>
-								</div>
-							</div>
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">						
 
-							<div class="block_item small">
-								<div class="space_between">
-									<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
-									<span class="mid algin_item">Матч! Футбол</span>
-								</div>
-							</div>							
-						</div>						
-		
-					</div>											
-				</div>		
+								<span class="font_medium">63'</span>
 
-				<div class="block"> <!-- Мнение болельщиков -->
-					<h1 class="caption">Мнение болельщиков</h1>
-					<div class="block_item middle_simple">
-						<div class="rating">
-							<div class="rating_completed"></div>
+								<span class="right_players float_left algin_item">
+									<span class="icon">
+										<img src="images/arrow.svg">
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Вышел</span>
+										<div class="font_medium">С. Гаврилов</div>
+									</span>							
+								</span>		
+
+								<span class="second_right_players float_left algin_item">
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Ушел</span>
+										<div class="font_medium">Н. Сергеев</div>
+									</span>
+								</span>													
+							</span>
+						</div>	
+
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">						
+
+								<span class="font_medium">56'</span>
+
+								<span class="right_players float_left algin_item">
+									<span class="icon">
+										<img src="images/green_goal.svg">
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Пенальти</span>
+										<div class="font_medium">В. Вильдяев</div>
+									</span>
+								</span>
+							</span>
 						</div>
-						<div class="rating_info">80.07% (45 370) голосов за команду А</div>				
+
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">
+								<span class="left_players float_right algin_item">
+									<span>
+										<span>Красная карточка</span>
+										<div class="font_medium">А. Швец</div>
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span class="icon">
+										<img src="images/red_card.svg">
+									</span>
+								</span>							
+
+								<span class="font_medium">49'</span>
+							</span>
+						</div>												
+
+						<div class="block_item small just_content">
+							<span class="text_algin">
+								<span>Первый тайм завершен</span>
+								<div class="completed">Счет 0:1</div>
+							</span>
+						</div>		
+
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">						
+
+								<span class="font_medium">39'</span>
+
+								<span class="right_players float_left algin_item">
+									<span class="icon">
+										<img src="images/green_ball.svg">
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Гол</span>
+										<div class="font_medium">Г. Епишин</div>
+									</span>
+								</span>
+								<span class="second_right_players float_left algin_item">
+									<span class="img_man"><img src="??.jpg"></span>
+									<span>
+										<span>Гол. пас</span>
+										<div class="font_medium">Г. Онучин</div>
+									</span>
+								</span>							
+							</span>
+						</div>		
+
+						<div class="block_item small just_content position_rel">
+							<span class="text_algin">
+								<span class="left_players float_right algin_item">
+									<span>
+										<span>Желтая карточка</span>
+										<div class="font_medium">Б. Бериша</div>
+									</span>
+									<span class="img_man"><img src="??.jpg"></span>
+									<span class="icon">
+										<img src="images/yellow_card.svg">
+									</span>
+								</span>							
+
+								<span class="font_medium">49'</span>
+							</span>
+						</div>																
+					</div>
+
+					<div class="block"> <!-- Матч будет показан на каналах -->
+						<h1 class="caption">Матч будет показан на каналах</h1>
+						<div class="column">
+							<div class="column_block">
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg"> Россия</span>
+										<span class="mid algin_item">Russia Extreme</span>
+									</div>
+								</div>
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+										<span class="mid algin_item">Матч!</span>
+									</div>
+								</div>														
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Франция</span>
+										<span class="mid algin_item">Eurosport 2</span>
+									</div>
+								</div>
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Беларусь</span>
+										<span class="mid algin_item">Беларусь 5</span>
+									</div>
+								</div>								
+							</div>	
+
+							<div class="column_block">
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+										<span class="mid algin_item">Россия 24</span>
+									</div>
+								</div>
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Португалия</span>
+										<span class="mid algin_item">Sport tv 2</span>
+									</div>
+								</div>													
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+										<span class="mid algin_item">Sport 1</span>
+									</div>
+								</div>
+
+								<div class="block_item small">
+									<div class="space_between">
+										<span class="font_medium algin_item"><img class="img_margin" src="??.jpg">Россия</span>
+										<span class="mid algin_item">Матч! Футбол</span>
+									</div>
+								</div>							
+							</div>						
+			
+						</div>											
 					</div>		
 
-					<div class="block_item middle_simple">
-						<div class="rating">
-							<div class="rating_mid"  style="width: 20%;"></div>
+					<div class="block"> <!-- Мнение болельщиков -->
+						<h1 class="caption">Мнение болельщиков</h1>
+						<div class="block_item middle_simple">
+							<div class="rating">
+								<div class="rating_completed"></div>
+							</div>
+							<div class="rating_info">80.07% (45 370) голосов за команду А</div>				
+						</div>		
+
+						<div class="block_item middle_simple">
+							<div class="rating">
+								<div class="rating_mid"  style="width: 20%;"></div>
+							</div>
+							<div class="rating_info">13.08% (7 414) голосов за команду B</div>				
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="rating">
+								<div class="rating_not_started"  style="width: 5%;"></div>
+							</div>
+							<div class="rating_info">6.85% (3 879) голосов за ничью</div>				
+						</div>														
+					</div>		
+
+					<div class="block"> 
+						<div class="column">
+							<div class="column_block"> <!-- Последние игры команды А -->
+								<h1 class="caption">Последние игры команды А</h1>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>																					
+							</div>
+
+							<div class="column_block"> <!-- Последние игры команды B -->
+								<h1 class="caption">Последние игры команды B</h1>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>																					
+							</div>			
+			
+						</div>											
+					</div>					
+				</span>
+
+				<span id="content_forecasts" class="content_switch" style="display: none;">
+					<div class="block"> 
+						<div class="column">
+							<div class="column_block"> <!-- Оценка букмекеров -->
+								<h1 class="caption">Оценка букмекеров</h1>
+								<div class="block_item big" style="height: 172px">
+									<div class="bookmaker">
+										<div class="bookmaker_item" style="margin-bottom: 20px;">
+											<div class="bookmaker_block block_completed font_bold">
+												<span class="bookmaker_number completed">1</span>
+												<span>2.34</span>
+											</div>
+											<div class="bookmaker_block block_not_started font_bold">
+												<span class="bookmaker_number not_started">Х</span>
+												<span>3.24</span>
+											</div>
+											<div class="bookmaker_block block_mid font_bold">
+												<span class="bookmaker_number mid">2</span>
+												<span>2.25</span>
+											</div>																				
+										</div>
+										<div class="bookmaker_item font_medium">
+											<span>С коэф. <span class="font_bold completed">2.34</span> букмекеры считают, что выиграет команда А</span>
+										</div>
+										<div class="bookmaker_item font_medium">
+											<span>С коэф. <span class="font_bold">3.24</span> букмекеры считают, что будет ничья</span>
+										</div>
+										<div class="bookmaker_item font_medium">
+											<span>С коэф. <span class="font_bold mid">3.25</span> букмекеры считают, что выиграет команда Б</span>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+
+							<div class="column_block"> <!-- Результаты голосования -->
+								<h1 class="caption">Результаты голосования</h1>
+
+								<div class="block_item middle_simple">
+									<div class="rating">
+										<div class="rating_completed"></div>
+									</div>
+									<div class="rating_info">80.07% (45 370) голосов за команду А</div>
+								</div>
+
+								<div class="block_item middle_simple">
+									<div class="rating">
+										<div class="rating_mid"></div>
+									</div>
+									<div class="rating_info">13.08% (7 414) голосов за команду B</div>
+								</div>														
+
+								<div class="block_item middle_simple">
+									<div class="rating">
+										<div class="rating_not_started"></div>
+									</div>
+									<div class="rating_info">6.85% (3 879) голосов за ничью</div>
+								</div>	
+							
+							</div>					
+			
+						</div>											
+					</div>					
+				</span>
+
+				<span id="content_starting_lineups" class="content_switch" style="display: none;">
+					<div class="block"> 
+
+						<div class="mobile_display_none">
+							<div class="caption_mobile">Составы команд</div>
+							<div class="mobile_switch"> <!-- меню на мобилке -->
+								<div class="mobile_switch_item mobile_switch_item_active">Ахмат</div>
+								<div class="mobile_switch_item">Урал</div>
+							</div>						
 						</div>
-						<div class="rating_info">13.08% (7 414) голосов за команду B</div>				
+
+
+						<div class="column">
+							<div class="column_block team_switch_one"> <!-- Состав команды А -->
+								<h1 class="caption comp_display_none">Состав команды А</h1>
+
+								<span class="caption_small">Расстановка 3-4-2-1</span>
+
+								<div class="block_item field">
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>16</span>
+											<span>Городов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>40</span>
+											<span>Уциев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>33</span>
+											<span>Гудиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>02</span>
+											<span>Биспо</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																		
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>15</span>
+											<span>Семенов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+												<span class="man_info_travma">
+													<img src="../images/Travma.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+												<span class="man_info_gate">
+													<img src="../images/green_goal.svg">
+												</span>
+												<span class="man_info_goal">
+													<span>2</span>
+													<img src="../images/green_ball.svg">
+												</span>
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>13</span>
+											<span>Мохаммади</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>04</span>
+											<span>Вилькер</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>		
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>03</span>
+											<span>Плиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																								
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>19</span>
+											<span>Иванов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>21</span>
+											<span>Роши</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																									
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>23</span>
+											<span>Швец</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>									
+									</div>
+								</div>							
+
+								<span class="caption_small">Тренер</span>
+
+								<div class="block_item small">
+									<div class="img_team"><img src="??.jpg"></div>
+									<span>Руслан Идигов</span>	
+								</div>
+
+								<span class="caption_small">Запасной состав</span>
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Городов</span>
+											<div class="font_medium">16. Вратарь</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/red_ball.svg">
+										<img class="img_margin_small" src="../images/red_goal.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Зоран Нижнич</span>
+											<div class="font_medium">20. Защитник</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_ball.svg">
+										<img class="img_margin_small" src="../images/red_card.svg">
+										<img class="img_margin_small" src="../images/yellow_card.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Харин</span>
+											<div class="font_medium">59. Полузащитник</div>
+											<div class="completed">Ушел - Н. Сергеев</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_goal.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>																																									
+							</div>
+
+							<div class="column_block team_switch_two"> <!-- Состав команды B -->
+								<h1 class="caption">Состав команды B</h1>
+
+								<span class="caption_small">Расстановка 3-4-2-1</span>
+
+								<div class="block_item field">
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>16</span>
+											<span>Городов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>40</span>
+											<span>Уциев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>33</span>
+											<span>Гудиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>02</span>
+											<span>Биспо</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																		
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>15</span>
+											<span>Семенов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+												<span class="man_info_travma">
+													<img src="../images/Travma.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+												<span class="man_info_gate">
+													<img src="../images/green_goal.svg">
+												</span>
+												<span class="man_info_goal">
+													<span>2</span>
+													<img src="../images/green_ball.svg">
+												</span>
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>13</span>
+											<span>Мохаммади</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>04</span>
+											<span>Вилькер</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>		
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>03</span>
+											<span>Плиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																								
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>19</span>
+											<span>Иванов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>21</span>
+											<span>Роши</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																									
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>23</span>
+											<span>Швец</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>									
+									</div>
+								</div>								
+
+								<span class="caption_small">Тренер</span>
+
+								<div class="block_item small">
+									<div class="img_team"><img src="??.jpg"></div>
+									<span>Руслан Идигов</span>	
+								</div>
+
+								<span class="caption_small">Запасной состав</span>
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Городов</span>
+											<div class="font_medium">16. Вратарь</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/red_ball.svg">
+										<img class="img_margin_small" src="../images/red_goal.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Зоран Нижнич</span>
+											<div class="font_medium">20. Защитник</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_ball.svg">
+										<img class="img_margin_small" src="../images/red_card.svg">
+										<img class="img_margin_small" src="../images/yellow_card.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Харин</span>
+											<div class="font_medium">59. Полузащитник</div>
+											<div class="completed">Ушел - Н. Сергеев</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_goal.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>																	
+							</div>			
+			
+						</div>											
+					</div>
+
+					<div class="block"> 
+
+						<div class="mobile_display_none">
+							<div class="caption_mobile">Составы предыдущих игр</div>
+							<div class="mobile_switch"> <!-- меню на мобилке -->
+								<div class="mobile_switch_item mobile_switch_item_active">Ахмат</div>
+								<div class="mobile_switch_item">Урал</div>
+							</div>						
+						</div>
+
+						<div class="column">
+							<div class="column_block team_switch_one"> <!-- Состав команды А -->
+								<h1 class="caption comp_display_none">Состав команды А</h1>
+
+								<span class="caption_small">Расстановка 3-4-2-1</span>
+
+								<div class="block_item field">
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>16</span>
+											<span>Городов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>40</span>
+											<span>Уциев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>33</span>
+											<span>Гудиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>02</span>
+											<span>Биспо</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																		
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>15</span>
+											<span>Семенов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+												<span class="man_info_travma">
+													<img src="../images/Travma.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+												<span class="man_info_gate">
+													<img src="../images/green_goal.svg">
+												</span>
+												<span class="man_info_goal">
+													<span>2</span>
+													<img src="../images/green_ball.svg">
+												</span>
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>13</span>
+											<span>Мохаммади</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>04</span>
+											<span>Вилькер</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>		
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>03</span>
+											<span>Плиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																								
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>19</span>
+											<span>Иванов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>21</span>
+											<span>Роши</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																									
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>23</span>
+											<span>Швец</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>									
+									</div>
+								</div>							
+
+								<span class="caption_small">Тренер</span>
+
+								<div class="block_item small">
+									<div class="img_team"><img src="??.jpg"></div>
+									<span>Руслан Идигов</span>	
+								</div>
+
+								<span class="caption_small">Запасной состав</span>
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Городов</span>
+											<div class="font_medium">16. Вратарь</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/red_ball.svg">
+										<img class="img_margin_small" src="../images/red_goal.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Зоран Нижнич</span>
+											<div class="font_medium">20. Защитник</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_ball.svg">
+										<img class="img_margin_small" src="../images/red_card.svg">
+										<img class="img_margin_small" src="../images/yellow_card.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Харин</span>
+											<div class="font_medium">59. Полузащитник</div>
+											<div class="completed">Ушел - Н. Сергеев</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_goal.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>																																									
+							</div>
+
+							<div class="column_block team_switch_two"> <!-- Состав команды B -->
+								<h1 class="caption">Состав команды B</h1>
+
+								<span class="caption_small">Расстановка 3-4-2-1</span>
+
+								<div class="block_item field">
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>16</span>
+											<span>Городов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>40</span>
+											<span>Уциев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>33</span>
+											<span>Гудиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>02</span>
+											<span>Биспо</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																		
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>15</span>
+											<span>Семенов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+												<span class="man_info_travma">
+													<img src="../images/Travma.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+												<span class="man_info_gate">
+													<img src="../images/green_goal.svg">
+												</span>
+												<span class="man_info_goal">
+													<span>2</span>
+													<img src="../images/green_ball.svg">
+												</span>
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>13</span>
+											<span>Мохаммади</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/red_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>											
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>04</span>
+											<span>Вилькер</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>		
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>03</span>
+											<span>Плиев</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																								
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>19</span>
+											<span>Иванов</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>
+
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>21</span>
+											<span>Роши</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+												<span>
+													<img src="../images/yellow_card.svg">
+												</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>																									
+									</div>
+
+									<div class="field_string">
+										<span class="field_string_item">
+											<span class="img_man_big"><img src="??.jpg"></span>
+											<span>23</span>
+											<span>Швец</span>
+
+											<span class="field_info_right">
+												<span class="field_rating">7.1</span>
+											</span>
+
+											<span class="field_info_left">
+											</span>										
+										</span>									
+									</div>
+								</div>								
+
+								<span class="caption_small">Тренер</span>
+
+								<div class="block_item small">
+									<div class="img_team"><img src="??.jpg"></div>
+									<span>Руслан Идигов</span>	
+								</div>
+
+								<span class="caption_small">Запасной состав</span>
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Городов</span>
+											<div class="font_medium">16. Вратарь</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/red_ball.svg">
+										<img class="img_margin_small" src="../images/red_goal.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Зоран Нижнич</span>
+											<div class="font_medium">20. Защитник</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_ball.svg">
+										<img class="img_margin_small" src="../images/red_card.svg">
+										<img class="img_margin_small" src="../images/yellow_card.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>	
+
+								<div class="block_item small space_between">
+									<span class="algin_item">
+										<div class="img_team"><img src="??.jpg"></div>
+										<span>
+											<span>Евгений Харин</span>
+											<div class="font_medium">59. Полузащитник</div>
+											<div class="completed">Ушел - Н. Сергеев</div>
+										</span>									
+									</span>
+									<span class="algin_item">
+										<img class="img_margin_small" src="../images/green_goal.svg">
+										<img class="img_margin_small" src="../images/arrow.svg">
+									</span>
+								</div>																	
+							</div>			
+			
+						</div>											
+					</div>						
+				</span>
+						
+				<span id="content_match_statistics" class="content_switch" style="display: none;">
+					<div class="block"> <!-- Статистика матча -->
+						<h1 class="caption">Статистика матча</h1>
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>68%</span>
+								<span class="font_medium">Владение мячем</span>
+								<span>32%</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 67.5%"></div>
+								<div class="statistics_right" style="width: 32%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>6</span>
+								<span class="font_medium">Удары в створ</span>
+								<span>2</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 69.5%"></div>
+								<div class="statistics_right" style="width: 30%"></div>
+							</div>		
+						</div>
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>3</span>
+								<span class="font_medium">Удары мимо ворот</span>
+								<span>10</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 29.5%"></div>
+								<div class="statistics_right" style="width: 70%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>3</span>
+								<span class="font_medium">Заблокированные удары</span>
+								<span>1</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 67.5%"></div>
+								<div class="statistics_right" style="width: 32%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>2</span>
+								<span class="font_medium">Угловые</span>
+								<span>3</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 45.5%"></div>
+								<div class="statistics_right" style="width: 54%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>2</span>
+								<span class="font_medium">Офсайды</span>
+								<span>0</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 100%"></div>
+								<div class="statistics_right" style="width: 0%"></div>
+							</div>		
+						</div>		
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>2</span>
+								<span class="font_medium">Фолы</span>
+								<span>2</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 49.75%"></div>
+								<div class="statistics_right" style="width: 49.75%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>2</span>
+								<span class="font_medium">Желтые карточки</span>
+								<span>1</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 75.5%"></div>
+								<div class="statistics_right" style="width: 24%"></div>
+							</div>		
+						</div>																							
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>0</span>
+								<span class="font_medium">Упущенный голевой момент</span>
+								<span>4</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 0%"></div>
+								<div class="statistics_right" style="width: 100%"></div>
+							</div>		
+						</div>																							
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>8</span>
+								<span class="font_medium">Удары из шрафной площади</span>
+								<span>2</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 85.5%"></div>
+								<div class="statistics_right" style="width: 14%"></div>
+							</div>		
+						</div>		
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>6</span>
+								<span class="font_medium">Удары из-за штрафной площади</span>
+								<span>4</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 75.5%"></div>
+								<div class="statistics_right" style="width: 24%"></div>
+							</div>		
+						</div>
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>1</span>
+								<span class="font_medium">Отбито вратарем</span>
+								<span>1</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 49.75%"></div>
+								<div class="statistics_right" style="width: 49.75%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>416</span>
+								<span class="font_medium">Пасы</span>
+								<span>360</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 65.5%"></div>
+								<div class="statistics_right" style="width: 34%"></div>
+							</div>		
+						</div>	
+
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>360 (74%)</span>
+								<span class="font_medium">Точные пасы</span>
+								<span>411 (88%)</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 40.5%"></div>
+								<div class="statistics_right" style="width: 59%"></div>
+							</div>		
+						</div>																							
+						<div class="block_item middle_simple">
+							<div class="space_between with_few_padding_bottom">
+								<span>41/65 (63%)</span>
+								<span class="font_medium">Длинные мячи</span>
+								<span>35/62 (80%)</span>
+							</div>								
+							<div class="statistics">
+								<div class="statistics_left" style="width: 75.5%"></div>
+								<div class="statistics_right" style="width: 24%"></div>
+							</div>		
+						</div>						
+					</div>		
+
+					<div class="block"> 
+						<div class="column">
+							<div class="column_block"> <!-- Личные встречи -->
+								<h1 class="caption">Личные встречи</h1>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score">1:2</div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score">1:2</div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score">1:2</div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score">1:2</div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>																					
+							</div>
+
+							<div class="column_block"> <!-- Тренеры в личных встречах -->
+								<h1 class="caption">Тренеры в личных встречах</h1>
+
+								<div class="block_item big with_padding_bottom with_few_margin">
+									<span class="big_item"></span>
+									<span class="big_item">
+										<div class="width_team_name">Руслан Идигов</div>
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="font_medium space_between" style="width: 63px;">
+											<span>5</span>
+											<span>3</span>  
+											<span>7</span> 
+										</div>
+										<div class="img_team"><img src="??.jpg"></div>
+										<div class="width_team_name">Дмитрий Парфенов</div>
+									</span>						
+								</div>	
+								<span class="font_medium">
+									<div style="padding-bottom: 3px;"><span style="padding-right: 7px;">5</span> раз победила команда Ахмат</div>				
+									<div style="padding-bottom: 3px;"><span style="padding-right: 7px;">3</span> раз команды этих сыграли в ничью</div>	
+									<div style="padding-bottom: 3px;"><span style="padding-right: 7px;">7</span> раз победила команда Урал</div>									
+								</span>								
+							</div>				
+			
+						</div>											
 					</div>	
 
-					<div class="block_item middle_simple">
-						<div class="rating">
-							<div class="rating_not_started"  style="width: 5%;"></div>
-						</div>
-						<div class="rating_info">6.85% (3 879) голосов за ничью</div>				
-					</div>														
-				</div>		
+					<div class="block"> 
+						<div class="column">
+							<div class="column_block"> <!-- Последние игры команды А -->
+								<h1 class="caption">Последние игры команды А</h1>
 
-				<div class="block"> 
-					<div class="column">
-						<div class="column_block"> <!-- Последние игры команды А -->
-							<h1 class="caption">Последние игры команды А</h1>
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
 
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
+										<div class="score"><a href="">1:2</a></div>
 
-									<div class="score"><a href="">1:2</a></div>
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
 
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
+									</span>						
+								</div>
 
-								</span>						
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>
+
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
+
+										<div class="score"><a href="">1:2</a></div>
+
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
+
+									</span>						
+								</div>																					
 							</div>
 
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
+							<div class="column_block"> <!-- Последние игры команды B -->
+								<h1 class="caption">Последние игры команды B</h1>
 
-									<div class="score"><a href="">1:2</a></div>
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
 
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
+										<div class="score"><a href="">1:2</a></div>
 
-								</span>						
-							</div>
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
 
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
+									</span>						
+								</div>
 
-									<div class="score"><a href="">1:2</a></div>
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
 
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
+										<div class="score"><a href="">1:2</a></div>
 
-								</span>						
-							</div>
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
 
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
+									</span>						
+								</div>
 
-									<div class="score"><a href="">1:2</a></div>
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
 
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
+										<div class="score"><a href="">1:2</a></div>
 
-								</span>						
-							</div>																					
-						</div>
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
 
-						<div class="column_block"> <!-- Последние игры команды B -->
-							<h1 class="caption">Последние игры команды B</h1>
+									</span>						
+								</div>
 
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
+								<div class="block_item big with_padding_bottom">
+									<span class="font_medium big_item">11.03.19</span>
+									<span class="big_item mobile_space_between">
+										<span class="algin_item reverse">
+											<div class="width_team_name"><a href="">Ахмат</a></div>
+											<div class="img_team"><img src="??.jpg"></div>					
+										</span>
 
-									<div class="score"><a href="">1:2</a></div>
+										<div class="score"><a href="">1:2</a></div>
 
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
+										<span class="algin_item reverse">
+											<div class="img_team"><img src="??.jpg"></div>
+											<div class="width_team_name"><a href="">Ростов</a></div>		
+										</span>
 
-								</span>						
-							</div>
-
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
-
-									<div class="score"><a href="">1:2</a></div>
-
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
-
-								</span>						
-							</div>
-
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
-
-									<div class="score"><a href="">1:2</a></div>
-
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
-
-								</span>						
-							</div>
-
-							<div class="block_item big with_padding_bottom">
-								<span class="font_medium big_item">11.03.19</span>
-								<span class="big_item mobile_space_between">
-									<span class="algin_item reverse">
-										<div class="width_team_name"><a href="">Ахмат</a></div>
-										<div class="img_team"><img src="??.jpg"></div>					
-									</span>
-
-									<div class="score"><a href="">1:2</a></div>
-
-									<span class="algin_item reverse">
-										<div class="img_team"><img src="??.jpg"></div>
-										<div class="width_team_name"><a href="">Ростов</a></div>		
-									</span>
-
-								</span>						
-							</div>																					
-						</div>			
-		
-					</div>											
-				</div>													
+									</span>						
+								</div>																					
+							</div>			
+			
+						</div>											
+					</div>					
+				</span>							
 			</div>
 
 			<div class="right_block"> <!-- Правый блок -->
@@ -1205,6 +2695,215 @@
 			</div>	
 		</div>	
 	</div>
+
+
+	<div id="standings" class="standings" style="display: none;"> <!-- Всплывающая Турнирная таблица -->
+		<div class="standings_block">
+			
+			<div onclick="close_standings()" class="close">
+				<div class="toggle"></div>
+			</div>
+
+			<h1 class="caption">
+				<span>Информация о матче</span>
+				<span class="small_menu">
+					<div class="small_menu_item ">Все</div>
+					<div class="small_menu_item active_small_menu_item">Дома</div>
+					<div class="small_menu_item">В гостях</div>
+				</span>
+			</h1>
+
+
+			<div class="font_medium space_between team_padding_two">
+				<span style="min-width: 106px;">
+					<span class="number_margin">№</span>
+					<span>Команда</span>
+				</span>
+				<span>
+					<span class="standings_info_item">Очки</span>
+					<span class="standings_info_item">Игры</span>
+					<span class="standings_info_item_mid">Забитые</span>
+					<span class="standings_info_item_big">Пропущенные</span>
+					<span class="standings_info_item_mid">Победы</span>
+					<span class="standings_info_item">Ничья</span>
+					<span class="standings_info_item_big">Поражение</span>							
+				</span>
+			</div>	
+
+			<div class="block_item small space_between lead overflow">
+				<span class="algin_item">
+					<span class="completed font_bold number_margin">01</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Зенит</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>		
+
+			<div class="block_item small space_between Active_green_border overflow">
+				<span class="algin_item">
+					<span class="completed font_bold number_margin">02</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Ахмат</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+			<div class="block_item small space_between mid_team overflow">
+				<span class="algin_item">
+					<span class="mid font_bold number_margin">03</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Краснодар</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+			<div class="block_item small space_between Active_blue_border overflow">
+				<span class="algin_item">
+					<span class="mid font_bold number_margin">04</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Урал</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>
+
+			<div class="block_item small space_between overflow">
+				<span class="algin_item">
+					<span class="font_bold number_margin">05</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Ростов</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+			<div class="block_item small space_between overflow">
+				<span class="algin_item">
+					<span class="font_bold number_margin">06</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Рубин</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+			<div class="block_item small space_between overflow">
+				<span class="algin_item">
+					<span class="font_bold number_margin">07</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Арсенал</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+			<div class="block_item small space_between overflow">
+				<span class="algin_item">
+					<span class="font_bold number_margin">08</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Оренбург</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>		
+
+			<div class="block_item small space_between end_team overflow">
+				<span class="algin_item">
+					<span class="started font_bold number_margin">09</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Крылья советов</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>		
+
+			<div class="block_item small space_between end_team overflow">
+				<span class="algin_item">
+					<span class="started font_bold number_margin">10</span>
+					<div class="img_team"><img src="??.jpg"></div>
+					<span><a href="">Анжи</a></span>
+				</span>
+				<span>
+					<span class="standings_info_item">56</span>
+					<span class="standings_info_item">29</span>
+					<span class="standings_info_item_mid">23</span>
+					<span class="standings_info_item_big">12</span>
+					<span class="standings_info_item_mid">19</span>
+					<span class="standings_info_item">4</span>
+					<span class="standings_info_item_big">6</span>	
+				</span>						
+			</div>	
+
+
+			<button onclick="close_standings()" class="red_button">закрыть</button>																				
+		</div>
+	</div>	
 	
 
 	<footer> <!-- нижний колонтитул -->

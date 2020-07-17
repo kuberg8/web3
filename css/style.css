@@ -35,6 +35,25 @@ a {
 }
 
 
+@keyframes animatetop {
+	from {
+		margin-top: -170px;
+	}
+	to {
+		margin-top: 0%;
+	}
+}
+
+@keyframes animatetop2 {
+	from {
+		margin-top: 0%;
+	}
+	to {
+		margin-top: -170px;
+	}
+}
+
+
 
 header {
 	display: flex;
@@ -2281,13 +2300,12 @@ footer {
 
 		outline: none;
 		color: white;
-		font-size: 20px;
+		font-size: 30px;
 		min-height: 30px;
 		min-width: 30px;
 
-		border: 2px solid white;
-		border-radius: 50%;
 		background: none;
+		border: none;
 		cursor: pointer;
 	}
 

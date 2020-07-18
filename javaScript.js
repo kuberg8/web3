@@ -71,3 +71,62 @@ function contetnSwitch(elim, content, notNone) {
 function close_standings() {
 	document.getElementById('standings').style.display = 'none'
 }
+
+
+
+
+
+var date = new Date();
+
+
+
+let sec = date.getSeconds()
+let min = date.getMinutes()
+let hour = date.getHours()
+
+
+
+function timeIs(num) {
+	if(num < 10) {
+		num = 0 + String(num)
+	}
+
+	return num
+}
+
+
+let time = document.getElementsByClassName("clock")
+for (var i = 0; i < time.length; i++) {
+	time[i].textContent = (timeIs(hour) + ":"+ timeIs(min) + ":" + timeIs(sec))
+}
+
+
+
+setInterval(t, 1000)
+
+function t() {
+
+	if(hour == 23 && min == 59 && sec == 59) {
+		hour = -1
+	}
+
+
+	if(min == 59 && sec == 59) {
+		min = -1
+		hour += 1
+	}
+
+
+	if(sec == 59) {
+		sec = -1
+		min += 1 
+	}
+
+
+
+	sec = sec + 1
+
+	for (var i = 0; i < time.length; i++) {
+	time[i].textContent = (timeIs(hour) + ":"+ timeIs(min) + ":" + timeIs(sec))
+	}
+}

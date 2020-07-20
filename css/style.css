@@ -10,6 +10,16 @@ a {
 	color: black;
 }
 
+ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
 
 *,
 *:before,
@@ -105,6 +115,9 @@ header {
 }
 
 .online {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-family: GothaProMed;
 	font-size: 13px;
 	height: 20px;
@@ -113,7 +126,6 @@ header {
 	margin-left: 10px;
 	border-radius: 3px;
 	text-align: center;
-	padding-top: 3px;
 }
 
 
@@ -145,7 +157,11 @@ header {
 	cursor: pointer;
 }
 
-.nav_link:hover a {
+.nav_icon {
+	display: none;
+}
+
+.nav_link:hover .nav_link_a {
 	color: #3eb745;
 } 
 
@@ -247,7 +263,6 @@ header {
 .time {
 	display: flex;
 	align-items: center;
-	min-width: 50px;
 	height: 25px;
 	margin-left: 25px;
 	cursor: default;
@@ -270,7 +285,6 @@ header {
 	display: none;
 	align-items: center;
 	font-size: 10px;
-	min-width: 45px;
 	height: 25px;
 	margin-left: 25px;
 	cursor: default;
@@ -503,6 +517,9 @@ footer {
 	box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.menu a {
+	color: #949fa6;
+}
 
 .menu_item {
 	display: flex;
@@ -772,6 +789,30 @@ footer {
 	padding-top: 10px;
 }
 
+.rating_completed {
+	display: block;
+	width: 80%;
+	height: 7px;
+	background: #3eb745;
+	border-radius: 5px;
+	position: relative;
+}
+
+.rating_mid {
+	display: block;
+	width: 20%;
+	height: 7px;
+	background: #0081d8;
+	border-radius: 5px;	
+}
+
+.rating_not_started {
+	display: block;
+	width: 10%;
+	height: 7px;
+	background: #949fa6;
+	border-radius: 5px;		
+}
 
 .penalty_card {
 	display: block;
@@ -912,30 +953,14 @@ footer {
 	top: -18px;
 }
 
-.rating_completed {
+.rating_above {
 	display: block;
-	width: 80%;
 	height: 7px;
-	background: #3eb745;
-	border-radius: 5px;
+	border-radius: 5px;	
 	position: relative;
 }
 
-.rating_mid {
-	display: block;
-	width: 20%;
-	height: 7px;
-	background: #0081d8;
-	border-radius: 5px;	
-}
 
-.rating_not_started {
-	display: block;
-	width: 10%;
-	height: 7px;
-	background: #949fa6;
-	border-radius: 5px;		
-}
 
 .statistics {
 	display: flex;
@@ -1116,18 +1141,26 @@ footer {
 	align-items: center;
 	background: white;
 	color: black;
-	font-size: 9px;
-	border-radius: 10px;
+	font-size: 8px;
+	border-radius: 3px;
 	padding: 1px 2px;
-	margin-top: 2px;
+	margin-top: 4px;
+}
+
+.man_info_goal span {
+	margin-right: 2px;
 }
 
 .man_info_goal img {
-	width: 10px;
+	display: flex;
+	align-items: center;
+	width: 8px;
 }
 
 
 .man_info_gate {
+	display: block;
+	width: 17px;
 	background: white;
 	border-radius: 1px;
 }
@@ -1318,6 +1351,9 @@ footer {
 	font-size: 18px;
 }
 
+.clock {
+	width: 50px;
+}
 
 
 
@@ -1758,7 +1794,9 @@ footer {
 @media (max-width: 414px) {
 	header {
 		min-width: auto;
-		background-size: auto;
+		background: url("../images/header_small.jpg") no-repeat;
+		background-size: 100% 100%;
+		height: 75px;
 	}
 
 	.header_logo {
@@ -1791,7 +1829,7 @@ footer {
 	
 	.nav {
 		display: none;
-		position: fixed;
+		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100vw;
@@ -1832,7 +1870,7 @@ footer {
 		border: none;
 	}
 
-	.nav_link a {
+	.nav_link .nav_link_a {
 		display: flex;
 		align-items: center;
 		padding: 0 10px;
@@ -1841,6 +1879,25 @@ footer {
 		background: white;
 		margin: 2px auto;
 		border-radius: 3px;
+	}
+
+	.nav_link_a:hover .nav_icon {
+		border-color: #3eb745;
+	}
+
+	.nav_icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;	
+		min-width: 35px;
+		max-width: 35px;
+		height: 35px;
+		border-radius: 50px;
+		border: 1px solid #9ba5ac;
+		margin: 0 7px;
+		overflow: hidden;
+		font-size: 15px;
 	}
 
 
@@ -1879,11 +1936,13 @@ footer {
 		height: 31px;
 		border-bottom: none;
 		width: 100%;
+		font-size: 11px;
 	}
 
 	.img_menu {
 		position: static;
 		margin: 0 10px;
+		font-size: 13px;
 	}
 
 	.menu_item:active {
@@ -2004,7 +2063,7 @@ footer {
 		justify-content: center;
 	}
 
-	#match_status {
+	.match_status_block {
 		display: flex;
 		width: 120px;
 		justify-content: space-around;
@@ -2288,7 +2347,7 @@ footer {
 	.block_button_mobile {
 		display: flex;
 		align-items: center;
-		height: 118px;
+		height: 75px;
 		width: 75%;
 		background: rgba(0,0,0, 0.9);
 		padding: 20px;
